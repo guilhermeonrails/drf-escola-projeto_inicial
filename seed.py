@@ -16,7 +16,7 @@ def criando_alunos(quantidade_de_pessoas):
         nome = fake.name()
         rg = "{}{}{}{}".format(random.randrange(10, 99),random.randrange(100, 999),random.randrange(100, 999),random.randrange(0, 9) ) 
         cpf = cpf.generate()
-        data_nascimento = fake.date_between(start_date='-40y', end_date='-18')
+        data_nascimento = fake.date_between(start_date='-18y', end_date='today')
         a = Aluno(nome=nome,rg=rg, cpf=cpf,data_nascimento=data_nascimento)
         a.save()
 
